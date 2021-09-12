@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinJar.Domain", "CoinJar.Domain\CoinJar.Domain.csproj", "{3F241FF5-7BB0-4253-AC68-AD99A9E45361}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinJar.Api", "CoinJar.Api\CoinJar.Api.csproj", "{6E364FED-D369-43D3-A2A7-D59D68F2DF6B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinJar.DB", "CoinJar.DB\CoinJar.DB.csproj", "{4F3B52EE-EA78-42C8-B710-B3F8ACD3A278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jar.UnitTests", "Jar.UnitTests\Jar.UnitTests.csproj", "{EDDA91B3-CC7E-4409-AD63-D64665116E68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F241FF5-7BB0-4253-AC68-AD99A9E45361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F241FF5-7BB0-4253-AC68-AD99A9E45361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F241FF5-7BB0-4253-AC68-AD99A9E45361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F241FF5-7BB0-4253-AC68-AD99A9E45361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E364FED-D369-43D3-A2A7-D59D68F2DF6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E364FED-D369-43D3-A2A7-D59D68F2DF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E364FED-D369-43D3-A2A7-D59D68F2DF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E364FED-D369-43D3-A2A7-D59D68F2DF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F3B52EE-EA78-42C8-B710-B3F8ACD3A278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F3B52EE-EA78-42C8-B710-B3F8ACD3A278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F3B52EE-EA78-42C8-B710-B3F8ACD3A278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F3B52EE-EA78-42C8-B710-B3F8ACD3A278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDA91B3-CC7E-4409-AD63-D64665116E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDA91B3-CC7E-4409-AD63-D64665116E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDA91B3-CC7E-4409-AD63-D64665116E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDA91B3-CC7E-4409-AD63-D64665116E68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D49CE0B9-8A43-40D8-8CDA-24CE800CBA24}
+	EndGlobalSection
+EndGlobal
