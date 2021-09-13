@@ -39,19 +39,12 @@ namespace CoinJar.Api.Controllers
                 Volume = deposit.Volume * dto.Quantity
             };
 
-            try
+            var command = new CreateJarCommand
             {
-                var command = new CreateJarCommand
-                {
-                    Coin = coin,
-                    UserName = dto.UserName
-                };
-                await _mediator.DispatchAsync(command);
-            }
-            catch(InvalidOperationException ex)
-            {
-                return BadRequest(ex.Message);
-            }
+                Coin = coin,
+                UserName = dto.UserName
+            };
+            await _mediator.DispatchAsync(command);
 
             return Ok();
         }
@@ -69,19 +62,12 @@ namespace CoinJar.Api.Controllers
                 Volume = deposit.Volume * dto.Quantity
             };
 
-            try
+            var command = new DepositCommand
             {
-                var command = new DepositCommand
-                {
-                    Coin = coin,
-                    UserName = username
-                };
-                await _mediator.DispatchAsync(command);
-            }
-            catch (InvalidOperationException ex)
-            {
-                return BadRequest(ex.Message);
-            }
+                Coin = coin,
+                UserName = username
+            };
+            await _mediator.DispatchAsync(command);
 
             return Ok();
         }
@@ -100,18 +86,11 @@ namespace CoinJar.Api.Controllers
         [HttpDelete("{username}")]
         public async Task<IActionResult> Delete(string username)
         {
-            try
+            var command = new ResetCommand
             {
-                var command = new ResetCommand
-                {
-                    UserName = username
-                };
-                await _mediator.DispatchAsync(command);
-            }
-            catch (InvalidOperationException ex)
-            {
-                return BadRequest(ex.Message);
-            }
+                UserName = username
+            };
+            await _mediator.DispatchAsync(command);
 
             return Ok("Account successfully reset");
         }

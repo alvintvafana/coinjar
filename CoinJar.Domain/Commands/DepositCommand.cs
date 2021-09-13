@@ -1,5 +1,6 @@
 ﻿using CoinJar.Domain.Dtos;
 using CoinJar.Domain.Entities;
+using CoinJar.Domain.Exceptions;
 using CoinJar.Domain.Services;
 using System;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace CoinJar.Domain.Commands
         {
             var jar = await _repository.GetOneAsync(x=>x.UserName == command.UserName);
             if (jar == null)
-                throw new InvalidOperationException("No jar is associated with this username");
+                throw new ValidateException("No jar is associated with this username");
             jar.AddCoin(command.Coin);
             _repository.Update(jar);
             await _unitOfWork.SaveAsync();

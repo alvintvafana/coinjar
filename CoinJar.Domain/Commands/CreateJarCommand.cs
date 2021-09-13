@@ -1,5 +1,6 @@
 ﻿using CoinJar.Domain.Dtos;
 using CoinJar.Domain.Entities;
+using CoinJar.Domain.Exceptions;
 using CoinJar.Domain.Services;
 using System;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace CoinJar.Domain.Commands
         {
             var jar = await _repository.GetOneAsync(x => x.UserName == command.UserName);
             if (jar != null)
-                throw new InvalidOperationException("Jar associated with this username already exists");
+                throw new ValidateException("Jar associated with this username already exists");
             jar = new Jar(command.UserName);
             jar.AddCoin(command.Coin);
             await _repository.InsertAsync(jar);

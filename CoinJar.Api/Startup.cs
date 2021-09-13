@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using CoinJar.Domain.Commands;
 using Microsoft.OpenApi.Models;
 using CoinJar.Domain.Queries;
+using CoinJar.Api.MiddleWares;
 
 namespace CoinJar.Api
 {
@@ -61,6 +62,7 @@ namespace CoinJar.Api
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
+            app.UseMiddleware(typeof(ErrorHandlingMiddleware));
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

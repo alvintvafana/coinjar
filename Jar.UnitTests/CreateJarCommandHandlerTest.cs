@@ -1,5 +1,6 @@
 ﻿using CoinJar.Domain.Commands;
 using CoinJar.Domain.Dtos;
+using CoinJar.Domain.Exceptions;
 using CoinJar.Domain.Services;
 using Moq;
 using System;
@@ -63,7 +64,7 @@ namespace Jar.UnitTests
                 Coin = coin
             };
 
-            await Assert.ThrowsAsync<InvalidOperationException>(() => createJarCommandHandler.HandleAsync(command));
+            await Assert.ThrowsAsync<ValidateException>(() => createJarCommandHandler.HandleAsync(command));
         }
     }
 }

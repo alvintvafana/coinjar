@@ -1,4 +1,5 @@
 ﻿using CoinJar.Domain.Dtos;
+using CoinJar.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 
@@ -34,7 +35,7 @@ namespace CoinJar.Domain.Entities
             Volume += coin.Volume;
             if(Volume > JARVOLUME)
             {
-                throw new InvalidOperationException("Jar is now full!");
+                throw new ValidateException("Jar is now full!");
             }
 
             Balance += coin.Amount;
